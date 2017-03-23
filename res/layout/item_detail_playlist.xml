@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout_root" android:background="@drawable/bg_white_list_selector" android:layout_width="fill_parent" android:layout_height="90.0sp">
+        <ImageView android:id="@+id/img_songs" android:layout_width="60.0sp" android:layout_height="60.0sp" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_music_default" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+        <ImageView android:id="@+id/img_menu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:src="@drawable/ic_more_vert_grey600_36dp" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp" android:layout_toLeftOf="@+id/img_menu" android:layout_toRightOf="@+id/img_songs" android:layout_centerVertical="true">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/main_color_dark" android:id="@+id/tv_song" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="VEXKHOIS" android:singleLine="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black_secondary_text" android:id="@+id/tv_singer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="VEXKHOIS" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

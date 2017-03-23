@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/light_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginTop="5.0sp" android:layout_marginRight="5.0sp">
+        <Spinner android:id="@+id/list_preset" android:layout_width="fill_parent" android:layout_height="60.0sp" android:layout_marginRight="5.0sp" android:layout_toLeftOf="@+id/switch1" android:layout_centerVertical="true" />
+        <Switch android:id="@+id/switch1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@+id/layout_header">
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_bands" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp" android:layout_marginBottom="5.0sp" />
+    </ScrollView>
+</RelativeLayout>

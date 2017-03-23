@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/img_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@+id/layout_abc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/layout_header" android:paddingTop="10.0sp" android:paddingBottom="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp">
+            <ImageView android:id="@+id/img_avatar1" android:background="@color/white" android:layout_width="50.0sp" android:layout_height="50.0sp" android:src="@drawable/ic_account_circle_grey" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp" android:layout_toLeftOf="@+id/btn_close" android:layout_toRightOf="@+id/img_avatar1" android:layout_centerVertical="true">
+                <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/tv_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="dasdasdasd" android:singleLine="true" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/black" android:id="@+id/tv_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="dasdasdasd" android:singleLine="true" />
+            </LinearLayout>
+            <Button android:id="@+id/btn_close" android:background="@drawable/powered_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp" android:layout_marginBottom="5.0sp" android:layout_above="@+id/layout_content" android:layout_below="@+id/layout_header">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@+id/img_track" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/music_note" android:scaleType="centerCrop" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@color/alpha_white" android:layout_width="fill_parent" android:layout_height="65.0sp" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="vertical" android:id="@+id/layout_small_song" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@+id/tv_song" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="AABBCBCBC ABBCBABC" android:singleLine="true" />
+                    <RelativeLayout android:id="@+id/layout_playcount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@+id/tv_song">
+                        <ImageView android:id="@+id/img_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_arrow_white_24dp" android:layout_centerVertical="true" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@+id/tv_playcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18,205" android:singleLine="true" android:layout_toRightOf="@+id/img_play" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/layout_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0sp" android:layout_above="@+id/tv_link">
+            <SeekBar android:id="@+id/seekBar1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:layout_toLeftOf="@+id/tv_duration" android:layout_toRightOf="@+id/tv_current_time" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/tv_current_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="00:00" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@+id/tv_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:text="00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@color/main_color" android:gravity="center_horizontal" android:id="@+id/tv_link" android:paddingLeft="5.0sp" android:paddingRight="5.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0sp" android:layout_above="@+id/layout_bonus" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/layout_bonus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@+id/layout_control">
+            <Button android:id="@+id/btn_equalizer" android:background="@drawable/ic_equalizer_black_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0sp" android:minHeight="1.0sp" />
+            <Button android:id="@+id/btn_add_playlist" android:background="@drawable/ic_playlist_add_black_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0sp" android:minWidth="1.0sp" android:minHeight="1.0sp" />
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/layout_control" android:layout_width="fill_parent" android:layout_height="60.0sp" android:layout_alignParentBottom="true">
+            <CheckBox android:id="@+id/cb_shuffle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:button="@drawable/cb_shuffle" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_centerVertical="true" />
+            <Button android:id="@+id/btn_play" android:background="@drawable/ic_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_centerInParent="true" />
+            <Button android:id="@+id/btn_next" android:background="@drawable/ic_fast_forward_black_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0sp" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_toRightOf="@+id/btn_play" android:layout_centerVertical="true" />
+            <Button android:id="@+id/btn_prev" android:background="@drawable/ic_fast_rewind_black_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="35.0sp" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_toLeftOf="@+id/btn_play" android:layout_centerVertical="true" />
+            <CheckBox android:id="@+id/cb_repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:button="@drawable/cb_repeat" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

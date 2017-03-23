@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@+id/list_tracks" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="1.0sp" android:fastScrollEnabled="true" android:headerDividersEnabled="false" android:footerDividersEnabled="false" android:smoothScrollbar="true" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/tv_no_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:layout_marginRight="5.0sp" android:text="@string/info_no_track" android:layout_centerInParent="true" />
+</RelativeLayout>

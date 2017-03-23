@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/layout_root" android:background="@drawable/bg_white_list_selector" android:layout_width="fill_parent" android:layout_height="90.0sp">
+        <ImageView android:id="@+id/img_songs" android:layout_width="60.0sp" android:layout_height="60.0sp" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_music_default" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+        <ImageView android:id="@+id/img_add_playlist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:src="@drawable/ic_playlist_add_grey600_24dp" android:scaleType="centerCrop" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:layout_toLeftOf="@+id/img_add_playlist" android:layout_toRightOf="@+id/img_songs" android:layout_centerVertical="true">
+            <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/main_color_dark" android:id="@+id/tv_song" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="VEXKHOIS" android:maxLines="3" />
+            <RelativeLayout android:id="@+id/layout_info_play" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp">
+                <ImageView android:id="@+id/img_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_av_timer_grey600_18dp" android:layout_centerVertical="true" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/black_text" android:id="@+id/tv_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16:00" android:singleLine="true" android:layout_toRightOf="@+id/img_timer" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/black_text" android:id="@+id/tv_playcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18,205" android:singleLine="true" android:layout_toRightOf="@+id/img_play" android:layout_centerVertical="true" />
+                <ImageView android:id="@+id/img_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="23.0dip" android:src="@drawable/ic_play_arrow_grey600_18dp" android:layout_toRightOf="@+id/tv_duration" android:layout_alignParentTop="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

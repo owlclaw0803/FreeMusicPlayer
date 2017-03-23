@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_search" android:id="@+id/action_search" android:title="@string/title_search" android:showAsAction="collapseActionView|ifRoom" android:actionViewClass="android.widget.SearchView" />
+    <item android:icon="@drawable/ic_action_about" android:id="@+id/action_info" android:title="@string/title_info" android:showAsAction="collapseActionView|ifRoom" />
+    <!-- <item android:icon="@drawable/ic_action_about" android:id="@+id/action_extra" android:title="@string/title_extra" android:showAsAction="collapseActionView|ifRoom">
+        <item android:id="@+id/extra_menu_home" android:title="HOME"/>
+		<item android:id="@+id/extra_menu_top_hit" android:title="TOP HIT"/>
+		<item android:id="@+id/extra_menu_library" android:title="LIBRARY"/>
+		<item android:id="@+id/extra_menu_playlist" android:title="PLAYLIST"/>
+		<item android:id="@+id/extra_menu_genres" android:title="GENRES"/>
+	</item>  -->
+</menu>

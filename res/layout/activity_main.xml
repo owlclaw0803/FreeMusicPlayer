@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mzdevelopment.freemusicplayer.view.PagerSlidingTabStrip android:id="@+id/pagertabstrip" android:layout_width="fill_parent" android:layout_height="50.0sp" />
+    <android.support.v4.view.ViewPager android:id="@+id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/layout_child_listen" android:layout_below="@+id/pagertabstrip" />
+    <RelativeLayout android:id="@+id/layout_child_listen" android:background="@color/main_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="70.0sp" android:layout_above="@+id/layout_ad">
+        <ImageView android:id="@+id/img_small_track" android:background="@color/white" android:layout_width="50.0sp" android:layout_height="50.0sp" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_music_default" android:scaleType="centerCrop" android:layout_centerVertical="true" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@+id/tv_small_song" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="AABBCBCBC ABBCBABC" android:maxLines="2" android:layout_toLeftOf="@+id/btn_small_play" android:layout_toRightOf="@+id/img_small_track" android:layout_centerVertical="true" />
+        <Button android:id="@+id/btn_small_play" android:background="@drawable/ic_play_arrow_white_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_toLeftOf="@+id/btn_small_next" android:layout_centerVertical="true" />
+        <Button android:id="@+id/btn_small_next" android:background="@drawable/ic_skip_next_white_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0sp" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_toLeftOf="@+id/btn_small_close" android:layout_centerVertical="true" />
+        <Button android:id="@+id/btn_small_close" android:background="@drawable/ic_close_white_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include android:id="@+id/layout_listen_music" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@+id/layout_ad" layout="@layout/item_listen_music" />
+    <RelativeLayout android:gravity="center_horizontal" android:id="@+id/layout_ad" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_create_playlist">
+        <item>Create playlist</item>
+    </string-array>
+    <string-array name="list_menus">
+        <item>Home</item>
+        <item>Library</item>
+    </string-array>
+    <string-array name="list_options">
+        <item>Add To Playlist</item>
+        <item>Delete Track</item>
+        <item>Set As Ringtone</item>
+        <item>Set As Notification</item>
+    </string-array>
+    <string-array name="list_options_playlist">
+        <item>Play All</item>
+        <item>Rename Playlist</item>
+        <item>Delete Playlist</item>
+    </string-array>
+    <string-array name="list_share">
+        <item>Send Email</item>
+        <item>Rate me</item>
+        <item>More Apps</item>
+    </string-array>
+    <string-array name="list_track_playlist">
+        <item>Remove to playlist</item>
+    </string-array>
+</resources>

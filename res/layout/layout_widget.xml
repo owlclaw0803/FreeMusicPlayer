@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="@dimen/widget_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/appwidget_dark_bg" android:paddingLeft="@dimen/widget_margin" android:paddingTop="@dimen/widget_margin_top" android:paddingRight="@dimen/widget_margin" android:paddingBottom="@dimen/widget_margin_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_play" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_music_default" android:scaleType="centerCrop" />
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/widget_margin">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@+id/tv_song" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollHorizontally="true" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever">
+                <requestFocus android:focusable="true" android:focusableInTouchMode="true" android:duplicateParentState="true" />
+            </TextView>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/widget_margin_top" android:layout_below="@+id/tv_song">
+                <Button android:id="@+id/btn_next" android:background="@drawable/ic_skip_next_white_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_alignParentRight="true" />
+                <ImageView android:id="@+id/btn_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_play_arrow_white_36dp" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_centerInParent="true" />
+                <Button android:id="@+id/btn_prev" android:background="@drawable/ic_skip_previous_white_36dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="1.0sp" android:minHeight="1.0sp" android:layout_alignParentLeft="true" />
+                <ProgressBar android:id="@+id/progressBar1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@android:style/Widget.ProgressBar.Small" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    package="com.mzdevelopment.freemusicplayer" 
+    android:versionCode="1" 
+    android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="14"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppBaseTheme1">
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.mzdevelopment.freemusicplayer.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.mzdevelopment.freemusicplayer.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/app_name" android:name="com.mzdevelopment.freemusicplayer.EqualizerActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/app_name" android:name="com.mzdevelopment.freemusicplayer.ShowUrlActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="false" android:name="com.mzdevelopment.freemusicplayer.playerservice.MusicService">
+            <intent-filter>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.TOGGLE_PLAYBACK"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.PLAY"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.PAUSE"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.NEXT"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.PREVIOUS"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.STOP"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.ACTION_SEEK"/>
+            </intent-filter>
+        </service>
+        <receiver android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.mzdevelopment.freemusicplayer.widget.MusicWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info"/>
+        </receiver>
+        <receiver android:name="com.mzdevelopment.freemusicplayer.playerservice.MusicIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.TOGGLE_PLAYBACK"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.NEXT"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.PREVIOUS"/>
+                <action android:name="com.mzdevelopment.freemusicplayer.action.STOP"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@style/Theme.AppInvite.Preview">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <provider android:authorities="com.mzdevelopment.freemusicplayer.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+    </application>
+</manifest>
